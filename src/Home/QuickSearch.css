@@ -1,0 +1,65 @@
+#quicksearch{
+    height:500px;
+    width:85%;
+    margin-left: -3%;
+    margin-top: 2%;
+}
+#QuickHeading{
+    color:darkblue;
+    font-size:30px;
+    font-weight:bold;
+    font-family:'Times New Roman', Times, serif;
+}
+#QuickSubheading{
+    color:darkmagenta;
+    font-size: 20px;
+    margin-top: -23px;
+    margin-left: 14px;
+    font-family:'Times New Roman', Times, Times;
+}
+.titlecontainer{
+    height:180px;
+    width:31%;
+    box-shadow: 0px 3px 15px;
+    display: inline-block;
+    margin-left:2%;
+    margin-top: 4%;
+}
+#maintitlecontain{
+    margin-top: -2%;
+    margin-left: 6%;
+}
+.titleComponent1{
+    width:46%;
+    float:left;
+}
+.titleComponent2{
+    width:46%;
+    float:left;
+    margin-left:20px;
+    margin-top:20px;
+}
+.titleComponent1 > img{
+    height:180px;
+    width:100%;
+    
+       
+    
+}
+.componenetheading{
+    color:darkblue;
+    font-weight: bold;
+    font-size:25px;
+}
+.componentsubheading{
+    color:darkkhaki;
+    font-size: 19px;
+    line-height: 1;
+}
+.titlecontainer:hover{
+    transform: scale(1.1);
+}
+
+
+
+
