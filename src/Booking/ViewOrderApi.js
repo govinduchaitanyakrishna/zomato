@@ -1,11 +1,12 @@
 import React,{Component} from 'react';
-import ViewDisplay from './ViewOrderDisplay';
+import ViewOrder from './viewOrder';
+import Header from '../Header';
 import axios from 'axios';
 
-const url = "https://api-zoma.herokuapp.com/viewOrder";
-const url1 = "https://api-zoma.herokuapp.com/updateOrder"
+const url = "https://zomoapp.herokuapp.com/viewOrder";
+const url1 = "https://zomoapp.herokuapp.com/updateOrder";
 
-class ViewOrder extends Component {
+class ViewOrderApi extends Component {
     constructor(){
         super()
 
@@ -13,25 +14,33 @@ class ViewOrder extends Component {
             orders:''
         }
     }
+
     render(){
+        
         if(!sessionStorage.getItem('userData')){
             return(
                 <div>
+                    <Header/>
                     <h1>Login first to see booking</h1>
                 </div>
             )
         }
-       return(
-             <div className="container">
-                 <ViewDisplay orderData={this.state.orders}/>
-             </div>
-         )
+        return(
+            <>
+            <Header/>
+            <div className="container">
+                <ViewOrder orderData={this.state.orders}/>
+            </div>
+            <h1 style={{color:'green',fontWeight:'bold',textAlign:'center'}}>!* Successfully Ordered *!</h1>
+            </>
+        )
     }
 
     // get orders 
     componentDidMount(){
         if(this.props.location){
             var qparams = this.props.location.search;
+            console.log(qparams)
             if(qparams){
                 var data = {
                     "status":"Delivered",
@@ -44,16 +53,16 @@ class ViewOrder extends Component {
                     {
                         method:'PUT',
                         headers:{
-                            'Accept':'application/json',
-                            'Content-Type':'application/json'
+                            'accept':'application/json',
+                            'content-Type':'application/json'
                         },
                         body:JSON.stringify(data)
                     })
             }
         }
-       
-        axios.get(`${url}?email=${sessionStorage.getItem('userData').split(',')[1]}`).then((res) => {this.setState({orders:res.data})})
+        axios.get(`${url}?email=${sessionStorage.getItem('userData').split(',')[1]}`)
+        .then((res) => {this.setState({orders:res.data})})
     }
 }
 
-export default ViewOrder;
+export default ViewOrderApi;

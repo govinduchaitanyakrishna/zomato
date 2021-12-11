@@ -1,69 +1,81 @@
 body{
-    margin:auto
+    margin:auto;
 }
+/* #main{
+    margin-left: -30%;
+    margin-right:3%;
+} */
 
-#main{
-    margin-left: 2%;
-    margin-right: 2%;
-}
+
 #search{
-    background-image: url('https://i.ibb.co/gJbF4yH/food-wallpaper.png');
+    background-image: url(https://i.ibb.co/VWpBnvy/background.gif);
     background-repeat: no-repeat;
     background-size: cover;
-    background-color:red;
-    background-size: 100% 500px;
+    background-color: blue;
+    background-size: 100% 530px;
+    height:530px 130%;
     width:100%;
-    height: 500px;
+    margin-top: -6%;
+    margin-left: -5%;
 }
-
+#quicksearch{
+    
+    height:500px; 
+     width:100%; 
+}
 #login{
-    margin-left: 70%;
+    margin-left: 75%;
 }
-
 #login> a{
-    text-decoration: none;
-    color:black;
-    font-size:30px;
+    text-decoration:none;
+    color:white;
+    font-size: 30px;
+    font-family:cursive;
+    position:relative;
+    bottom:-20px;
 }
-
+#create_account{
+    border:2px solid white;
+}
 #logo{
     font-size:90px;
-    color:red;
-    text-align: center;
-    background-color:white;
+    color:rgb(6, 6, 87);
+    text-align:center;
+    background-color: white;
     height:150px;
     width:150px;
-    margin-left: 45%;
+    margin:auto;
     border-radius: 50%;
 }
-
-#logo > span {
-    font-weight: bold;
-    position: absolute;
-    margin-left: -25px;
-    margin-top: 10px
+#logo> span{
+    font-weight:bold;
+    position:absolute;
+    margin-left: -34px;
+    margin-top: 3px;
 }
-
-#heading{
-    text-align: center;
+#Heading{
+    text-align:center;
     color:white;
-    font-size:35px;
-    margin-top:30px;
+    margin-top: 30px;
+    font-size: 35px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
+#Heading:hover{
+    color:darkmagenta;
+}
 #dropdown{
-    height:60px;
-    width:60%;
-    margin-left: 28%;
-    margin-top: 3%;
+    height: 48px;
+    width: 55%;
+    margin-left: 25%;
+    margin-top: 2%;
 }
-
 select{
-    height:60px;
+    height:48px;
     width:30%;
-    font-size:20px
+    font-size: 20px;
+}
+#restaurant{
+    width:60%;
 }
 
-#restaurants{
-    width:50%;
-}
+

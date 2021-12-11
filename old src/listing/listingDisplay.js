@@ -10,10 +10,11 @@ const ListingDisplay = (props) => {
             if(listData.length>0){
             return listData.map((item) => {
                 return(
-                    <div className="item" key={item._id}>
+                    <div>
+                         <div className="item" key={item._id}>
                             <div className="row">
                                 <div className="col-md-5">
-                                    <img className="Image" alt={item.restaurant_name} src={item.restaurant_thumb}/>
+                                    <img className="Image"  alt="" src={item.restaurant_thumb}/>
                                 </div>
                                 <div className="col-md-7">
                                     <div className="hotel_name">
@@ -41,33 +42,33 @@ const ListingDisplay = (props) => {
                                 </div>
                             </div>
                     </div>
+                    </div>
                     
+                       
                 )
             })
             }else{
                 return(
                     <div>
-                        <h2>No Data For this filter</h2>
+                        <h1>No Data For This Filter</h1>
                     </div>
                 )
             }
-        }else{
+        }else {
             return(
                 <div>
-                    <img src="/images/loader.gif" alt="loader"/>
-                    <h3>loading....</h3>
+                    <img src="/images/loading.gif" alt="" />
                 </div>
             )
-            
         }
-
     }
 
-    return(
-        <div id="content">
-                {renderList(props)}
-        </div>
+    return(               
+                <div id="content">
+                    {renderList(props)}    
+                </div>  
     )
 }
+
 
 export default ListingDisplay;

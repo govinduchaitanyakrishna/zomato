@@ -1,8 +1,9 @@
 import React,{Component} from 'react';
 import './placeorder.css';
+import {Link} from 'react-router-dom'
 
-const url = "http://api-zoma.herokuapp.com//menuItem";
-const PostUrl = "http://api-zoma.herokuapp.com//placeOrder";
+const url = "https://api-zoma.herokuapp.com/menuItem";
+const PostUrl = "https://api-zoma.herokuapp.com/placeOrder";
 
 class PlaceOrder extends Component {
     constructor(props){
@@ -60,13 +61,20 @@ class PlaceOrder extends Component {
     }
 
     render(){
-        if(!sessionStorage.getItem('userData')){
-            return(
-                <div>
-                    <h1>Login first to place booking</h1>
-                </div>
-            )
-        }
+        // if(!sessionStorage.getItem('userData')){
+        //     return(
+        //         <div>
+        //             <h1>Login first to place booking</h1>
+        //             &nbsp;
+        //             <Link className="btn btn-info" to="/login">
+        //                 <span className="glyphicon glyphicon-user"></span>Login
+        //             </Link> &nbsp;
+        //             <Link className="btn btn-success" to="/register">
+        //                 <span className="glyphicon glyphicon-log-in"></span> Register
+        //             </Link>
+        //         </div>
+        //     )
+        // }
         console.log(this.state)
         return(
             <div className="container">

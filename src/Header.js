@@ -1,79 +1,87 @@
-import React, { Component } from 'react';
-import './Header.css'
-import { Link, withRouter } from 'react-router-dom';
+import React,{Component} from 'react';
+import './Header.css';
+import {Link,withRouter} from 'react-router-dom';
 
-const url = "https://krishdevjwt.herokuapp.com/api/auth/register"
+const url = 'https://user-login-api.herokuapp.com/api/auth/userInfo';
+class Header extends Component{
+  constructor(){
+    super()
 
-class Header extends Component {
-
-    constructor() {
-        super()
-
-        this.state = {
-            userData=''
-        }
+    this.state={
+        userData:''
     }
+}
 
-    handleLogout = () => {
-        this.setState({ userData: '' });
-        sessionStroage.removeItem('ltk');
-        sessionStroage.removeItem('userData');
-        this.props.history.push('/')
-    }
+handleLogout = () => {
+    this.setState({userData:''});
+    sessionStorage.removeItem('ltk');
+    sessionStorage.removeItem('userData');
+    this.props.history.push('/')
 
-    conditionalHeader = () => {
-        if (this.state.userData.name) {
-            let data = this.state.userData.name;
-            let outputArry = [data.name, data.email, data.phone, data.role];
-            sessionStorage.setItem('userData', outputArry);
-            return (
-                <>
-                    <button className="btn btn-info">Hi {this.state.userData.name}</button>
-                    &nbsp;
-                    <button className="btn btn-warning" onClick={this.handleLogout}>Logout</button>
-                </>
-            )
-        } else {
-            return (
-                <>
-                        <Link className="btn btn-success" to="/register">
-                            <span className="glyphicon glyphicon-log-in"></span>SignUp
-                        </Link> &nbsp;
-                        <Link className="btn btn-info" to="/login">
-                            <span className="glyphicon glyphicon-user"></span>Create an account
-                        </Link>
-                </>
-            )
-        }
-    }
-    render() {
-        return (
-            <header id="header">
-                <div id="logo_main">
-                    <Link to="/"><h1 id="heading">e!</h1></Link>
-                    <Link to="/viewOrder">Orders</Link>
-                </div>
-                <div className="logoRight">
-                    {this.conditionalHeader()}
-                </div>
-            </header>
+}
+
+conditionalHeader = () => {
+    if(this.state.userData.name){
+        let data = this.state.userData;
+        let outputArry = [data.name,data.email,data.phone,data.role];
+        sessionStorage.setItem('userData', outputArry);
+        return(
+            <>
+                <button className="btn btn-info">Hi {this.state.userData.name}</button>
+                &nbsp;
+                <button className="btn btn-warning" onClick={this.handleLogout}>Logout</button>
+            </>
         )
+    }else{
+        return(
+            <>
+                <Link to="/login" className="btn btn-success">
+                     LogIn
+                </Link> &nbsp;
+                <Link to="/register" className="btn btn-warning">
+                   Register
+                </Link>
+            </>
+        )  
     }
+}
 
-    componentDidMount() {
-        fetch(url, {
-            method: 'GET',
-            headers: {
-                'x-access-token': sessionStorage.getItem('ltk')
-            }
-        })
-            .then((res) => res.json())
-            .then((data) => {
-                this.setState({
-                    userData: data
-                })
-            })
-    }
+  changeMode = () => {
+      var mybody = document.body;
+      // if body have class mybody it will remove the class else add
+      mybody.classList.toggle('myDark');
+  }
+
+  render(){
+    return(
+      <>
+      <header id="headings">
+        <div className="divisions row justify-content-center">
+            <Link to="/"><span>e!</span></Link>
+        </div>
+        <div className="clearfix">  
+          <div className="p-3 float-right">
+            {this.conditionalHeader()}
+          </div>
+          {/* <button onClick={this.changeMode}>Dark Mode</button> */}
+        </div> 
+      </header>
+      </>
+    )
+  }
+
+  componentDidMount(){
+    fetch(url, {
+      method:'GET',
+      headers:{
+        'x-access-token':sessionStorage.getItem('ltk')
+      }
+    })
+    .then((res) => res.json())
+    .then((data) => {
+      this.setState({userData:data})
+    })
+  }
 
 }
 

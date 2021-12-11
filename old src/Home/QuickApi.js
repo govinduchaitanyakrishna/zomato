@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import QuickSearch from './QuickSearch';
 
-const url = "http://api-zoma.herokuapp.com/quicksearch"
+const url = "https://api-zoma.herokuapp.com/quicksearch"
 
 class QuickApi extends Component {
     constructor(props) {
         super(props);
 
-        this.state={
+        this.state = {
             QuickData:''
         }
     }
@@ -19,7 +19,7 @@ class QuickApi extends Component {
         )
     }
 
-    // api call
+    // api call 
     componentDidMount(){
         fetch(url)
         .then((res) => res.json())
@@ -27,7 +27,6 @@ class QuickApi extends Component {
             this.setState({QuickData:data})
         })
     }
-
 }
 
 export default QuickApi;

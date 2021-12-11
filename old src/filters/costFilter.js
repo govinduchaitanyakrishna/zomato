@@ -1,18 +1,17 @@
-import React, {Component} from 'react';
+import React,{Component} from 'react';
 import axios from 'axios';
 import './filter.css';
 //sessionStorage.setItem('mealId',mealId)
 
-const url = "http://api-zoma.herokuapp.com/filter"
 
+const url ="https://api-zoma.herokuapp.com/filter"
 
-class CostFilter extends Component{
-
+class CostFilter extends Component {
     filterCost = (event) => {
         let mealId = sessionStorage.getItem('mealId');
         let cost = (event.target.value).split('-');
         let lcost = cost[0];
-        let hcost = cost[1];
+        let hcost = cost[1]; 
         let filterUrl;
         if(event.target.value == ""){
             filterUrl = `${url}/${mealId}`
@@ -21,8 +20,7 @@ class CostFilter extends Component{
         }
         axios.get(filterUrl)
         .then((res) => {this.props.restPerCost(res.data)})
-    }
-
+        }
     render(){
         return(
             <div className="cusineFilter">
@@ -49,4 +47,5 @@ class CostFilter extends Component{
     }
 }
 
-export default CostFilter
+
+export default CostFilter;

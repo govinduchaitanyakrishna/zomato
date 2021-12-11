@@ -1,33 +1,33 @@
-import React,{Component} from 'react';
+import React,{Component} from "react";
+import {Link} from 'react-router-dom';
+import Header from '../Header';
 import './placeorder.css';
-import {Link} from 'react-router-dom'
 
-const url = "https://api-zoma.herokuapp.com/menuItem";
-const PostUrl = "https://api-zoma.herokuapp.com/placeOrder";
+const url = "https://zomoapp.herokuapp.com/menuItem";
+const PostUrl = "https://zomoapp.herokuapp.com/placeOrder";
 
-class PlaceOrder extends Component {
+class PlaceOrder extends Component{
     constructor(props){
         super(props)
 
         this.state={
-            id:Math.floor(Math.random()*100000),
+            id:Math.floor(Math.random()*10000),
             details:'',
-            amount:0,
             hotel_name:this.props.match.params.restName,
+            amount:'',
             name:sessionStorage.getItem('userData')?sessionStorage.getItem('userData').split(',')[0]:'',
             phone:sessionStorage.getItem('userData')?sessionStorage.getItem('userData').split(',')[2]:'',
-            email:sessionStorage.getItem('userData')?sessionStorage.getItem('userData').split(',')[1]:'',
             address:'',
-            status:'Pending'
+            email:sessionStorage.getItem('userData')?sessionStorage.getItem('userData').split(',')[1]:'',
+            status:'pending'
         }
     }
 
     handleChange = (event) => {
         this.setState({[event.target.name]:event.target.value})
     }
-
+    
     handleSubmit = () => {
-        console.log(this.state)
         fetch(PostUrl,
             {
                 method:'POST',
@@ -41,103 +41,99 @@ class PlaceOrder extends Component {
         .then(console.log("payment gateway"))
     }
 
-    renderItems =  (data) => {
+    renderItems = (data) => {
         if(data){
-            return data.map((item) => {
+           return data.map((item) => {
                 return(
-                    <div className="items" key={item.menu_id}>
-                        <img src={item.menu_image} alt={item.menu_name}/>
-                        <h3>{item.menu_name}</h3>
-                        <h4>Rs {item.menu_price}</h4>
-                    </div>
-                    
+                    <>
+                        <div className="menu card" >
+                            <div className="card-image" key={this.menu_id}>
+                                <img src={item.menu_image} alt="menuImage"/>
+                            </div>
+                            <div className="card-body">
+                                <h4>{item.menu_name}</h4>
+                                <p><span className="badge badge-success">{item.menu_type}</span></p>
+                                <p>Rs. {item.menu_price}</p>
+                            </div>
+                        </div>
+                    </>
                 )
             })
         }else{
             return(
-                <img src="/images/loader.gif" alt="loader"/>
+                <div>
+                    <div className="spinner-border text-muted"></div>
+                    <div className="spinner-grow text-muted"></div>
+                    <div className="spinner-border text-success"></div>
+                    <div className="spinner-grow text-success"></div>
+                </div>
             )
         }
-    }
+    }   
 
     render(){
-        // if(!sessionStorage.getItem('userData')){
-        //     return(
-        //         <div>
-        //             <h1>Login first to place booking</h1>
-        //             &nbsp;
-        //             <Link className="btn btn-info" to="/login">
-        //                 <span className="glyphicon glyphicon-user"></span>Login
-        //             </Link> &nbsp;
-        //             <Link className="btn btn-success" to="/register">
-        //                 <span className="glyphicon glyphicon-log-in"></span> Register
-        //             </Link>
-        //         </div>
-        //     )
-        // }
-        console.log(this.state)
+        if(!sessionStorage.getItem('userData')){
+            return(
+                <div>
+                    <h1>Login first to place booking</h1>
+                    <Link to='/login'><button className="btn btn-danger">Login</button></Link>
+                </div>
+            )
+        }
         return(
-            <div className="container">
-                <br/>
-                <div className="panel panel-info">
-                    <div className="panel-heading">
-                        <h3>
-                            Your order from {this.props.match.params.restName} is below:
-                        </h3>
-                    </div>
-                    <div className="panel-body">
-                    <form method="POST" action="http://zompay.herokuapp.com/paynow">
-                        <div className="row">
-                            
-                            <div className="col-md-12">
-                                <div className="col-md-6">
-                                    <div className="form-group">
-                                        <label>Name</label>
-                                        <input className="form-control" name="name" value={this.state.name}
-                                        onChange={this.handleChange}/>
-                                    </div>
+            <>
+                <Header/>
+                <div className="container" key={this.state.amount}>
+                    <br/>
+                    <div className="card">
+                        <div className="card-heading" style={{backgroundColor:'powderblue'}}>
+                            <h2 style={{Color:'midnightblue',fontWeight:'bold',margin:'8px 8px'}}>Your Order from {this.props.match.params.restName}</h2>
+                        </div>
+                       
+                        <div className="card-body">
+                            {this.renderItems(this.state.details)}
+                        </div>
+                        <div style={{marginLeft:'10px',color:'maroon'}}><b><h3> Total Price : {this.state.amount}</h3></b></div>
+                    </div>    
+                    <h4> please! click this.(after filling the address)</h4><button onClick={this.handleSubmit}>Submit</button>
+                    <form method="POST"  action="http://localhost:4000/paynow">
+                        <div className="form row">
+                            <div className="col-md-6">
+                                <div className="form-group">
+                                    <label><b>Name</b></label>
+                                    <input className="form-control" name="name" value={this.state.name} onChange={this.handleChange}/>
                                 </div>
-                                <div className="col-md-6">
-                                    <div className="form-group">
-                                        <label>EmailId</label>
-                                        <input className="form-control" name="email" value={this.state.email}
-                                        onChange={this.handleChange}/>
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="form-group">
-                                        <label>Phone</label>
-                                        <input className="form-control" name="phone" value={this.state.phone}
-                                        onChange={this.handleChange}/>
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="form-group">
-                                        <label>Address</label>
-                                        <input className="form-control" name="address" value={this.state.address}
-                                        onChange={this.handleChange}/>
-                                    </div>
-                                </div>
-                                
                             </div>
+                            <div className="col-md-6">
+                                <div className="form-group">
+                                    <label><b>Email</b></label>
+                                    <input className="form-control" name="email" value={this.state.email} onChange={this.handleChange}/>
+                                </div> 
+                            </div>
+                            <div className="col-md-6">
+                                <div className="form-group">
+                                    <label><b>Phone</b></label>
+                                    <input className="form-control" name="phone" value={this.state.phone} onChange={this.handleChange}/>
+                                </div>
+                            </div>
+                            <div className="col-md-6">
+                                <div className="form-group">
+                                    <label><b>Address</b></label>
+                                    <input className="form-control" name="address" value={this.state.address} onChange={this.handleChange}/>
+                                </div>
+                            </div> 
+                            
                             <input type="hidden" name="amount" value={this.state.amount}/>
                             <input type="hidden" name="id" value={this.state.id}/>
-                        </div>
-                        {this.renderItems(this.state.details)}
-                        <div className="row">
-                            <div className="col-md-12">
-                                <h2>Total Cost is Rs.{this.state.amount}</h2>
+                            <div className="row">
+                                <div className="col-md-4">
+                                    <button className="btn btn-success" type="submit">Checkout</button>
+                                </div>   
                             </div>
-                        </div>
-                        <button className="btn btn-success" onClick={this.handleSubmit} 
-                        type="submit">
-                                    Checkout
-                        </button>
-                        </form>
-                    </div>
+                        </div>     
+                    </form>    
                 </div>
-            </div>
-            
+            </>
         )
     }
 
@@ -152,7 +148,7 @@ class PlaceOrder extends Component {
             method:'POST',
             headers:{
                 'accept':'application/json',
-                'Content-Type':'application/json'
+                'content-Type':'application/json'
             },
             body:JSON.stringify(orderId)
         })
@@ -166,9 +162,7 @@ class PlaceOrder extends Component {
             })
             this.setState({details:data,amount:Totalprice})
         })
-
-        
     }
 }
 
-export default PlaceOrder
+export default PlaceOrder;

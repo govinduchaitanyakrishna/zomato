@@ -2,8 +2,8 @@ import React,{Component} from 'react';
 import ViewDisplay from './ViewOrderDisplay';
 import axios from 'axios';
 
-const url = "http://api-zoma.herokuapp.com/viewOrder";
-const url1 = "http://api-zoma.herokuapp.com/updateOrder"
+const url = "https://api-zoma.herokuapp.com/viewOrder";
+const url1 = "https://api-zoma.herokuapp.com/updateOrder"
 
 class ViewOrder extends Component {
     constructor(){
@@ -21,11 +21,11 @@ class ViewOrder extends Component {
                 </div>
             )
         }
-        return(
-            <div className="container">
-                <ViewDisplay orderData={this.state.orders}/>
-            </div>
-        )
+       return(
+             <div className="container">
+                 <ViewDisplay orderData={this.state.orders}/>
+             </div>
+         )
     }
 
     // get orders 
@@ -51,6 +51,7 @@ class ViewOrder extends Component {
                     })
             }
         }
+       
         axios.get(`${url}?email=${sessionStorage.getItem('userData').split(',')[1]}`).then((res) => {this.setState({orders:res.data})})
     }
 }

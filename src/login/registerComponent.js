@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 
-const url = "https://krishdevjwt.herokuapp.com/api/auth/register";
+const url = "https://developerjwt.herokuapp.com/api/auth/register";
 
 class Register extends Component {
     constructor(props){

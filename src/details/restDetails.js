@@ -1,12 +1,13 @@
-import React,{Component} from 'react';
+import React, {Component} from 'react';
 import axios from 'axios';
-import './details.css';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import MenuDisplay from './menuDisplay'
+import MenuDisplay from './menuDisplay';
+import Header from '../Header';
+import './details.css';
 
-const url = "https://api-zoma.herokuapp.com/details"
-const menu = "https://api-zoma.herokuapp.com/menu"
+const url = "https://zomoapp.herokuapp.com/details";
+const menu = "https://zomoapp.herokuapp.com/menu"
 
 class Details extends Component {
     constructor(){
@@ -22,63 +23,61 @@ class Details extends Component {
     addToCart = (data) => {
         //console.log("data in card",data)
         this.setState({userItem:data})
-
     }
 
     proceed = () => {
-        sessionStorage.setItem('menu', this.state.userItem);
+        sessionStorage.setItem('menu',this.state.userItem)
         this.props.history.push(`/placeOrder/${this.state.details.restaurant_name}`)
     }
 
     render(){
-        // console.log(">>>>details state",this.state.userItem)
-        //let details = this.state.details
-        let {details} = this.state
+        //console.log(">>>>>details",this.state.userItem)
+        let {details} = this.state;
+
         return(
             <>
-                <br/>
-                <div className="container">
-                    <div className="panel panel-danger">
-                        <div className="panel-heading">
-                            <h3>{this.state.details.restaurant_name}</h3>
+                <Header/>
+                <div className="container" key={this.state.restaurant_id}>
+                    <div className="card" style={{width:'80%', marginLeft:'8%',backgroundColor:'wheat'}}>
+                        <div>
+                            <img className="card-img-top" src={details.restaurant_thumb} alt="Card" style={{width:'100%'}}/>
                         </div>
-                        <div className="panel-body">
-                            <img src={details.restaurant_thumb} alt={details.restaurant_name} className="sliderImage"/>
-                           
-                           
-                            <hr/>
-                            <h2>{details.restaurant_name}</h2>
+                        <div className="card-body">
+                            <h2 className="card-title restHeading">{this.state.details.restaurant_name}</h2>
                             <Tabs>
-                                <TabList>
-                                    <Tab>Details</Tab>
-                                    <Tab>Contact</Tab>
-                                    <Tab>Menu</Tab>
-                                </TabList>
-
-                                <TabPanel>
-                                    <p>{details.restaurant_name} is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        
-                                </TabPanel>
-                                <TabPanel>
-                                    <p>CONTACT NUMBER:</p>
-                                    <p>NAME OF RESTAURANT OWNER:</p>
-                                </TabPanel>
-                                <TabPanel>
-                                    <h2>Menu</h2>
-                                    <MenuDisplay menudata={this.state.menuList}
-                                    finalOrder={(data) => {this.addToCart(data)}}/>
-                                </TabPanel>
-                            </Tabs>
-                            <button className="btn btn-success" onClick={this.proceed}>Proceed</button>
+                                    <TabList>
+                                        <Tab>Overview</Tab>
+                                        <Tab>Menu</Tab>
+                                        <Tab>Contact</Tab>
+                                    </TabList>
+                                    <TabPanel>
+                                    <h4><b>About This Place</b></h4>
+                                        <p><b>Average rating</b> - {details.average_rating}</p>
+                                        <br/>
+                                        <p><b>Rating text</b> - {details.rating_text}</p>
+                                        <br/>
+                                    </TabPanel>
+                                    <TabPanel>
+                                        <h3 style={{color:'midnightblue'}}><b>Menu</b></h3>
+                                        <MenuDisplay menudata={this.state.menuList} finalOrder = {(data) => {this.addToCart(data)}}/>
+                                    </TabPanel>
+                                    <TabPanel>
+                                        <h4><b>Contact</b></h4>
+                                        <p>{details.contact_number}</p>
+                                        <br/>
+                                        <h4><b>Address</b></h4>
+                                        <p>{details.address}</p>
+                                    </TabPanel>
+                                </Tabs>
+                                <button type="button" className="btn btn-success" onClick={this.proceed}>Proceed</button>
                         </div>
                     </div>
                 </div>
             </>
-            
         )
     }
 
-    //api 
+    //api calling
     async componentDidMount(){
         let restId = this.props.match.params.restId;
         let response = await axios.get(`${url}/${restId}`);
@@ -87,6 +86,9 @@ class Details extends Component {
         console.log(menudata.data)
         this.setState({details:response.data[0],menuList:menudata.data})
     }
+
 }
 
 export default Details;
+
+//https://zomoapp.herokuapp.com/quicksearch

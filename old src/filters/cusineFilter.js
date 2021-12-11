@@ -1,11 +1,13 @@
-import React, {Component} from 'react';
+import React,{Component} from 'react';
 import axios from 'axios';
 import './filter.css';
 
-const url = "http://api-zoma.herokuapp.com/filter"
+
+const url ="https://api-zoma.herokuapp.com/filter"
 
 
-class CuisineFilter extends Component{
+
+class CuisineFilter extends Component {
     filterCuisine = (event) => {
         let mealId = sessionStorage.getItem('mealId');
         let cuisineId = event.target.value;
@@ -17,7 +19,7 @@ class CuisineFilter extends Component{
         }
         axios.get(filterUrl)
         .then((res) => {this.props.restPerCusinie(res.data)})
-    }
+        }
     render(){
         return(
             <div className="cusineFilter">
@@ -47,4 +49,5 @@ class CuisineFilter extends Component{
     }
 }
 
-export default CuisineFilter
+
+export default CuisineFilter;

@@ -1,19 +1,30 @@
-body{
-    margin:auto
-}
-#header{
-    background-color: red;
-    height:86px;
-    width:100%;
-}
-.logo{
-    height:50px;
-    width:50px;
-}
-a{
-    text-decoration:none;
-}
-#heading{
-    color:red;
-    margin:21%;
-}
+/*------header------*/
+ #headings{
+    background: conic-gradient(#f69d3c, #3f87a6);
+    height:20%;
+   
+ }
+
+ .myDark{
+    background-color:black;
+    color:white;
+ }
+ 
+ /*-----icon of e!------*/
+ .divisions{
+    background-color:white;
+    height: 80px;
+    width: 80px;
+    border-radius:50%;
+    position: absolute;
+    top: 33px; 
+    left: 49px;
+    z-index:3;
+ }
+  
+ span{
+    font-size: 40px;
+    font-weight:bold;
+    text-align:center;
+    padding: auto;
+ }

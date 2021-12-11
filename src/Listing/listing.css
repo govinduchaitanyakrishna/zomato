@@ -1,110 +1,102 @@
-body{
-    margin:auto
-}
+
 #social{
-    display:inline-block;
-    margin-left: 75%;
-    margin-top: -4%;
+    display: inline-block;
+    margin-left:75%;
+    margin-top:-4%
 }
-#social > a{
-    text-decoration:none;
-    color:whitesmoke;
-    font-size:30px;
-    font-family: Arial, Helvetica, sans-serif;
-}
+
 #logo_main{
     height:70px;
     width:70px;
-    background-color:white;
+    background-color: white;
     border-radius:50%;
-    margin-left: 80px;
-    display:inline-block;
+    margin-left:80px;
+    display: inline-block; 
     margin-top: 1%;
 }
-#main{
-    margin-left: 12%;
+
+#mainListing{
+    margin-left: 1%;
     margin-top: 5%;
 }
-#filter{
-    height:700px;
-    width:20%;
-    float:left;
-    text-align:10%;
-    box-shadow: 1px 4px 8px;
-    padding-left:20px ;
-}
-#create_account{
 
-    border:2px  solid white;
+/*------listing display------*/
+
+.display{
+    display:inline-block;
 }
-#sizeselect{
-    width:70%;
-    height:8%;
-    font-size: 20px;
+
+.filter{
+    -webkit-box-shadow: 0 0 8px 8px grey;
+    -moz-box-shadow: 0 0 8px 8px grey;
+    box-shadow: 0 0 8px 8px grey;
+    margin-left:6%;
+    margin-right:50px;
 }
+
+.filter2{
+    -webkit-box-shadow: 0 0 8px 8px grey;
+    -moz-box-shadow: 0 0 8px 8px grey;
+    box-shadow: 0 0 8px 8px grey;
+    margin-right:10%;
+}
+
+.mainContainer{
+    margin-top:2%;
+    margin-left:4%;
+}
+
+@media screen and (max-width:770px){
+    .filter{
+        display:none;
+    }
+} 
+
+.text{
+    margin-top:10px; 
+    color:whitesmoke; 
+    font-size:6vh;
+    margin-bottom:10px;
+}
+
+.image_con{
+    display:inline-block;
+    margin:3px 3px 3px 3px;
+    margin-right:10px;
+  }
+
+.Img{
+    width:150px; 
+    height:150px; 
+    border-radius:5px;
+}
+
+/*--------------------------*/
+
 #content{
-    width:65%;
-    float:left;
-    margin-left: 5%;
-    margin-top:-1%;
-}
+    width:67%;
+    float: left;
+    margin-left: 1%;
+    margin-top: -1%;
 
-
-#select{
-    font-size:25px;
-    font-family: 'Times New Roman', Times, serif;
-    color:darkblue;
-}
-.titlecomponent1{
-    width:46%;
-    float:left;
-}
-.titlecomponent1 > img{
-    height:50%;
-    width:200px;
-    border-radius:17%;
-    position:relative;
-    left:35px;
-    top:25px;
-}
-.componentheading{
-    color:rgb(3, 3, 107);
-    font-size:30px;
-    margin-top:60px;
-    
-}
-.componentsubheading{
-    color:rgb(143, 134, 134)
-}
-.firstcoloumn{
-    margin-left: 5%;
-}
-.secondcoloumn{
-    margin-left:20%
-}
-#secondcoloumn{
-    margin-left: 13.5%;
-    
-}
-.hr{
-    width:95%;
-    text-align:left;
-    margin-left:20;
 }
 
 .item {
     width: 875px;
-    height: 320px;
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    height: 264px;
+    -webkit-box-shadow: 0 0 5px 5px lightgrey;
+    -moz-box-shadow: 0 0 5px 5px lightgrey;
+    box-shadow: 0 0 5px 5px lightgrey;
     margin-bottom: 20px;
 }
 
 .Image {
-    width: 340px;
-    height: 260px;
+    width: 237px;
+    height: 222px;
     border-radius: 23px;
     background-color: #ea6060;
     margin-left:5%;
+    margin-top:6%;
 }
 
 .hotel_name {
@@ -118,7 +110,7 @@ body{
     line-height: 2;
     letter-spacing: normal;
     text-align: left;
-    color: #192f60;
+    color: midnightblue;
 }
 
 .city_name {
@@ -132,7 +124,6 @@ body{
     line-height: 2.4;
     letter-spacing: normal;
     text-align: left;
-    color: #192f60;
 }
 
 .rating {
@@ -142,4 +133,3 @@ body{
 .labelDiv{
     margin-top:5%
 }
-

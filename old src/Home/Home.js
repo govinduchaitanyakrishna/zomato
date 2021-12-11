@@ -4,10 +4,12 @@ import QuickApi from './QuickApi';
 
 const Home = () => {
     return(
-        <div id="main">
-            <Search/>
-            <QuickApi/>
-        </div>
+      <div id="main">
+        <Search/>
+        <QuickApi/>
+      </div>
+      
+        
     )
 }
 

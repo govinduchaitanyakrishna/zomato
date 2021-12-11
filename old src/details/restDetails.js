@@ -5,8 +5,8 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import MenuDisplay from './menuDisplay'
 
-const url = "http://api-zoma.herokuapp.com/details"
-const menu = "http://api-zoma.herokuapp.com/menu"
+const url = "https://api-zoma.herokuapp.com/details"
+const menu = "https://api-zoma.herokuapp.com/menu"
 
 class Details extends Component {
     constructor(){
@@ -20,7 +20,7 @@ class Details extends Component {
     }
 
     addToCart = (data) => {
-        console.log("data in card",data)
+        //console.log("data in card",data)
         this.setState({userItem:data})
 
     }
@@ -44,13 +44,10 @@ class Details extends Component {
                         </div>
                         <div className="panel-body">
                             <img src={details.restaurant_thumb} alt={details.restaurant_name} className="sliderImage"/>
-                            <button className="btn btn-danger galButton" type="button" data-toggle="modal" data-target="#myGal">Click to See Image Gallery</button>
                            
                            
                             <hr/>
                             <h2>{details.restaurant_name}</h2>
-                            <h2>{details.rating_text}</h2>
-                            <h2>{details.average_rating} Star</h2>
                             <Tabs>
                                 <TabList>
                                     <Tab>Details</Tab>
@@ -63,7 +60,8 @@ class Details extends Component {
         
                                 </TabPanel>
                                 <TabPanel>
-                                    <h2>Any content 2</h2>
+                                    <p>CONTACT NUMBER:</p>
+                                    <p>NAME OF RESTAURANT OWNER:</p>
                                 </TabPanel>
                                 <TabPanel>
                                     <h2>Menu</h2>
