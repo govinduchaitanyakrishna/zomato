@@ -1,6 +1,8 @@
 import React,{Component} from 'react';
 
-const url = "https://developerjwt.herokuapp.com/api/auth/register";
+//const url = "https://developerjwt.herokuapp.com/api/auth/register";
+const url ="https://loginregisterapi.herokuapp.com/api/auth/register";
+
 
 class Register extends Component {
     constructor(props){
@@ -38,11 +40,7 @@ class Register extends Component {
             <div className="container">
                 <br/>
                 <div className="panel panel-info">
-                    <div className="panel-heading">
-                        <h3>
-                           Register
-                        </h3>
-                    </div>
+                   
                     <div className="panel-body">
                         <div className="row">
                             

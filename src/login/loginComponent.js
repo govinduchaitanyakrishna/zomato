@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 
-const url = "https://developerjwt.herokuapp.com/api/auth/login";
+//const url = "https://developerjwt.herokuapp.com/api/auth/login";
+const url ="https://loginregisterapi.herokuapp.com/api/auth/login";
 
 class Login extends Component {
     constructor(props){
@@ -8,8 +9,7 @@ class Login extends Component {
 
         this.state={
             email:'',
-            password:'',
-            message:''
+            password:''
         }
     }
 
@@ -45,11 +45,6 @@ class Login extends Component {
             <div className="container">
                 <br/>
                 <div className="panel panel-warning">
-                    <div className="panel-heading">
-                        <h3>
-                           Login
-                        </h3>
-                    </div>
                     <div className="panel-body">
                         <h2 style={{color:'red'}}>{this.state.message}</h2>
                         <div className="row">
