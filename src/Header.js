@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import './Header.css';
 import {Link,withRouter} from 'react-router-dom';
 
-const url = 'https://user-login-api.herokuapp.com/api/auth/userInfo';
+const url = 'http://app-logout.herokuapp.com/api/auth/userInfo';
 class Header extends Component{
   constructor(){
     super()
@@ -20,18 +20,19 @@ handleLogout = () => {
 
 }
 
+
 conditionalHeader = () => {
-    if(this.state.userData.name){
-        let data = this.state.userData;
-        let outputArry = [data.name,data.email,data.phone,data.role];
-        sessionStorage.setItem('userData', outputArry);
-        return(
-            <>
-                <button className="btn btn-info">Hi {this.state.userData.name}</button>
-                &nbsp;
-                <button className="btn btn-warning" onClick={this.handleLogout}>Logout</button>
-            </>
-        )
+  if(this.state.userData.name){
+      let data = this.state.userData;
+      let outputArry = [data.name,data.email,data.phone,data.role];
+      sessionStorage.setItem('userData', outputArry);
+      return(
+           <>
+              <button className="btn btn-info">Hi {this.state.userData.name}</button>
+                              &nbsp;
+              <button className="btn btn-warning" onClick={this.handleLogout}>Logout</button>
+          </>
+            )
     }else{
         return(
             <>
@@ -45,13 +46,6 @@ conditionalHeader = () => {
         )  
     }
 }
-
-  changeMode = () => {
-      var mybody = document.body;
-      // if body have class mybody it will remove the class else add
-      mybody.classList.toggle('myDark');
-  }
-
   render(){
     return(
       <>

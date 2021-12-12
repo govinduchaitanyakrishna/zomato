@@ -62,10 +62,7 @@ class PlaceOrder extends Component{
         }else{
             return(
                 <div>
-                    <div className="spinner-border text-muted"></div>
-                    <div className="spinner-grow text-muted"></div>
-                    <div className="spinner-border text-success"></div>
-                    <div className="spinner-grow text-success"></div>
+                    <img src="https://i.ibb.co/b17cWJg/food.gif"/>
                 </div>
             )
         }

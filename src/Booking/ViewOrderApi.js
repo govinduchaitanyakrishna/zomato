@@ -31,7 +31,7 @@ class ViewOrderApi extends Component {
             <div className="container">
                 <ViewOrder orderData={this.state.orders}/>
             </div>
-            <h1 style={{color:'green',fontWeight:'bold',textAlign:'center'}}>!* Successfully Ordered *!</h1>
+            {/* <h1 style={{color:'green',fontWeight:'bold',textAlign:'center'}}>!* Successfully Ordered *!</h1> */}
             </>
         )
     }
