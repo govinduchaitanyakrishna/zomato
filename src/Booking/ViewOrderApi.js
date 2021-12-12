@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import ViewOrder from './viewOrder';
 import Header from '../Header';
+import Footer from '../Footer';
 import axios from 'axios';
 
 const url = "https://zomoapp.herokuapp.com/viewOrder";
@@ -21,7 +22,7 @@ class ViewOrderApi extends Component {
             return(
                 <div>
                     <Header/>
-                    <h1>Login first to see booking</h1>
+                    <h1 style={{marginTop:'30%'}}>Login first to see booking</h1>
                 </div>
             )
         }

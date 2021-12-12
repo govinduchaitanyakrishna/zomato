@@ -29,7 +29,7 @@
 .filter{
     -webkit-box-shadow: 0 0 8px 8px grey;
     -moz-box-shadow: 0 0 8px 8px grey;
-    box-shadow: 0 0 8px 8px grey;
+    box-shadow: 0 5px 5px  black;
     margin-left:6%;
     margin-right:50px;
 }
@@ -37,7 +37,7 @@
 .filter2{
     -webkit-box-shadow: 0 0 8px 8px grey;
     -moz-box-shadow: 0 0 8px 8px grey;
-    box-shadow: 0 0 8px 8px grey;
+    box-shadow: 0 5px 5px black;
     margin-right:10%;
 }
 
@@ -84,9 +84,9 @@
 .item {
     width: 875px;
     height: 264px;
-    -webkit-box-shadow: 0 0 5px 5px lightgrey;
-    -moz-box-shadow: 0 0 5px 5px lightgrey;
-    box-shadow: 0 0 5px 5px lightgrey;
+    -webkit-box-shadow: 0 0 5px 5px black;
+    -moz-box-shadow: 0 0 5px 5px black;
+    box-shadow: 0 0 5px 10px black;
     margin-bottom: 20px;
 }
 
