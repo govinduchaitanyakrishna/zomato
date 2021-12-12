@@ -2,7 +2,7 @@ import React from 'react';
 import Search from './Search';
 import QuickApi from './QuickApi';
 import Header from '../Header';
-import Footer from '../Footer';
+// import Footer from '../Footer';
 
 const Home = () => {
     return(
@@ -10,7 +10,7 @@ const Home = () => {
         <Header/>
         <Search/>
         <QuickApi/> 
-        <Footer/>  
+        {/* <Footer/>   */}
         </>
     )
 }
