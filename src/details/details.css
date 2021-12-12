@@ -18,6 +18,9 @@
     margin-top:5px;
     margin-right:5px;
 }
+.restImage:hover{
+    transform: scale(1.1);
+}
  /* .details{
     margin-bottom: 5px;
     -webkit-box-shadow: 0 0 8px 8px grey;
@@ -25,3 +28,5 @@
     box-shadow: 0 0 8px 8px grey;
      background-color: white; 
 }  */
+
+

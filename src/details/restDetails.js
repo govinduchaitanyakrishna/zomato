@@ -38,9 +38,9 @@ class Details extends Component {
             <>
                 <Header/>
                 <div className="container" key={this.state.restaurant_id}>
-                    <div className="card" style={{width:'80%', marginLeft:'8%',backgroundColor:'wheat'}}>
+                    <div className="card" style={{width:'80%', marginLeft:'8%',backgroundColor:'white'}}>
                         <div>
-                            <img className="card-img-top" src={details.restaurant_thumb} alt="Card" style={{width:'100%'}}/>
+                            <img className="card-img-top" src={details.restaurant_thumb} alt="Card" style={{width:'100%',height:'250px'}}/>
                         </div>
                         <div className="card-body">
                             <h2 className="card-title restHeading">{this.state.details.restaurant_name}</h2>

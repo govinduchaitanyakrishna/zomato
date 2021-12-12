@@ -51,7 +51,7 @@ conditionalHeader = () => {
       <>
       <header id="headings">
         <div className="divisions row justify-content-center">
-            <Link to="/"><span>e!</span></Link>
+            <Link to="/"><span id="underline">e!</span></Link>
         </div>
         <div className="clearfix">  
           <div className="p-3 float-right">
