@@ -12,12 +12,12 @@ const Routing = () => {
     return(
         <BrowserRouter>
             <Route exact path="/" component={Home}/>
-            <Route path="/list/:mealId" component={Listing}/>
-            <Route path="/details/:restId" component={RestDetails}/>
-            <Route path="/placeOrder/:restName" component={PlaceOrder}/>
-            <Route path="/viewOrderApi" component={ViewOrderApi}/>
-            <Route path="/register" component={Register}/>
-            <Route path="/login" component={Login}/>
+            <Route  path="/list/:mealId" component={Listing}/>
+            <Route  path="/details/:restId" component={RestDetails}/>
+            <Route  path="/placeOrder/:restName" component={PlaceOrder}/>
+            <Route  path="/viewOrderApi" component={ViewOrderApi}/>
+            <Route  path="/register" component={Register}/>
+            <Route  path="/login" component={Login}/>
         </BrowserRouter>
     )
 }

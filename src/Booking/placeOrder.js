@@ -93,7 +93,7 @@ class PlaceOrder extends Component{
                         <div style={{marginLeft:'10px',color:'maroon'}}><b><h3> Total Price : {this.state.amount}</h3></b></div>
                     </div>    
                     <h4> please! click this.(after filling the address)</h4><button onClick={this.handleSubmit}>Submit</button>
-                    <form method="POST"  action="http://localhost:4000/paynow">
+                    <form method="POST"  action="https://paymentedu.herokuapp.com/paynow">
                         <div className="form row">
                             <div className="col-md-6">
                                 <div className="form-group">
