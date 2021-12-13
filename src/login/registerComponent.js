@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-
+import './loginComponent.css';
 //const url = "https://developerjwt.herokuapp.com/api/auth/register";
 const url ="http://app-logout.herokuapp.com/api/auth/register";
 
@@ -37,46 +37,50 @@ class Register extends Component {
 
     render(){
         return(
-            <div className="container">
+            <div className="center">
                 <br/>
                 <div className="panel panel-info">
-                   
-                    <div className="panel-body">
+                   <h1>Register</h1>
+                    <div id="form">
                         <div className="row">
                             
                             <div className="col-md-12">
                                 <div className="col-md-6">
-                                    <div className="form-group">
+                                    <div className="txt_field">
+                                        <input type="text" placeholder="Name" name="name" value={this.state.name}
+                                        onChange={this.handleChange}/>
+                                         <span></span>
                                         <label>Name</label>
-                                        <input className="form-control" name="name" value={this.state.name}
-                                        onChange={this.handleChange}/>
                                     </div>
                                 </div>
                                 <div className="col-md-6">
-                                    <div className="form-group">
+                                    <div className="txt_field">
+                                        <input type="text" placeholder="EmailId" name="email" value={this.state.email}
+                                        onChange={this.handleChange}/>
+                                         <span></span>
                                         <label>EmailId</label>
-                                        <input className="form-control" name="email" value={this.state.email}
-                                        onChange={this.handleChange}/>
                                     </div>
                                 </div>
                                 <div className="col-md-6">
-                                    <div className="form-group">
+                                    <div className="txt_field">
+                                        <input type="text" placeholder="Phone" name="phone" value={this.state.phone}
+                                        onChange={this.handleChange}/>
+                                         <span></span>
                                         <label>Phone</label>
-                                        <input className="form-control" name="phone" value={this.state.phone}
-                                        onChange={this.handleChange}/>
                                     </div>
                                 </div>
                                 <div className="col-md-6">
-                                    <div className="form-group">
-                                        <label>Password</label>
-                                        <input className="form-control" name="password" value={this.state.password}
+                                    <div className="txt_field">
+                                        <input type="password" placeholder="Password" type="password" name="password" value={this.state.password}
                                         onChange={this.handleChange}/>
+                                        <span></span>
+                                        <label>Password</label>
                                     </div>
                                 </div>
                                 
                             </div>
                         </div>
-                        <button className="btn btn-success" onClick={this.handleSubmit}>
+                        <button className="btn btn-success" id="button" onClick={this.handleSubmit}>
                             Register
                         </button>
                     </div>
