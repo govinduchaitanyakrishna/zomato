@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import './loginComponent.css';
+
 //const url = "https://developerjwt.herokuapp.com/api/auth/login";
 const url ="http://app-logout.herokuapp.com/api/auth/login";
 
@@ -42,51 +42,40 @@ class Login extends Component {
 
     render(){
         return(
-            <div className="center">
+            <div className="container">
                 <br/>
-                <div>
-                    <h1 >Login</h1>
-                    <div id="form">
-                    <div>
+                <div className="panel panel-warning">
+                    <div className="panel-body">
                         <h2 style={{color:'red'}}>{this.state.message}</h2>
-                        <div>
+                        <div className="row">
                             
                             <div className="col-md-12">
                                 <div className="col-md-6">
-                                    <div className="txt_field">
-                                        <input  type="text" placeholder="Username"name="email" value={this.state.email}
-                                        onChange={this.handleChange} required/>
-                                        <span></span>
-                                        <label>Username</label>
+                                    <div className="form-group">
+                                        <label>EmailId</label>
+                                        <input className="form-control" name="email" type="email" placeholder="Email"value={this.state.email}
+                                        onChange={this.handleChange}/>
                                     </div>
                                 </div>
                                 <div className="col-md-6">
-                                    <div className="txt_field">
-                                        <input  name="password" type="Password" placeholder="password"value={this.state.password}
-                                        onChange={this.handleChange} required/>
-                                        <span></span>
+                                    <div className="form-group">
                                         <label>Password</label>
+                                        <input className="form-control" name="password" type="password" placeholder="Password"value={this.state.password}
+                                        onChange={this.handleChange}/>
                                     </div>
-                                 </div>
                                 </div>
                                 
                             </div>
                         </div>
-                        <button className="btn btn-success" id="button" style={{marginLeft:"3%"}} onClick={this.handleSubmit}>
+                        <button className="btn btn-success" onClick={this.handleSubmit}>
                             Login
                         </button>
                     </div>
                 </div>
             </div>
-
-            
             
         )
     }
 }
 
-export default Login;
-
-
-
-
+export default Login

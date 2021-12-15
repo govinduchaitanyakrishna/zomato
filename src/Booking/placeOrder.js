@@ -1,11 +1,10 @@
 import React,{Component} from "react";
 import {Link} from 'react-router-dom';
 import Header from '../Header';
-import Footer from '../Footer';
 import './placeorder.css';
 
-const url = "https://zomoapp.herokuapp.com/menuItem";
-const PostUrl = "https://zomoapp.herokuapp.com/placeOrder";
+const url = "https://api-zoma.herokuapp.com/menuItem";
+const PostUrl = "https://api-zoma.herokuapp.com/placeOrder";
 
 class PlaceOrder extends Component{
     constructor(props){
@@ -49,7 +48,7 @@ class PlaceOrder extends Component{
                     <>
                         <div className="menu card" >
                             <div className="card-image" key={this.menu_id}>
-                                <img src={item.menu_image} alt="menuImage"/>
+                                <img src={item.menu_image} alt="menuImage" style={{boxShadow:'0 5px 15px black'}}/>
                             </div>
                             <div className="card-body">
                                 <h4>{item.menu_name}</h4>

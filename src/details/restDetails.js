@@ -6,8 +6,8 @@ import MenuDisplay from './menuDisplay';
 import Header from '../Header';
 import './details.css';
 
-const url = "https://zomoapp.herokuapp.com/details";
-const menu = "https://zomoapp.herokuapp.com/menu"
+const url = "https://api-zoma.herokuapp.com/details";
+const menu = "https://api-zoma.herokuapp.com/menu"
 
 class Details extends Component {
     constructor(){
@@ -40,7 +40,7 @@ class Details extends Component {
                 <div className="container" key={this.state.restaurant_id}>
                     <div className="card" style={{width:'80%', marginLeft:'8%',backgroundColor:'white'}}>
                         <div>
-                            <img className="card-img-top" src={details.restaurant_thumb} alt="Card" style={{width:'100%',height:'250px'}}/>
+                            <img className="card-img-top" src={details.restaurant_thumb} alt="Card" style={{width:'100%',height:'250px',boxShadow:'0 5px 10px black'}}/>
                         </div>
                         <div className="card-body">
                             <h2 className="card-title restHeading">{this.state.details.restaurant_name}</h2>

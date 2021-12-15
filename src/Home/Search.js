@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import './Search.css';
 
-const locationurl = "https://zomoapp.herokuapp.com/location";
-const restUrl = "https://zomoapp.herokuapp.com/restaurant?stateId=";
+const locationurl = "https://api-zoma.herokuapp.com/location";
+const restUrl = "https://api-zoma.herokuapp.com/restaurant?stateId=";
 
 class Search extends Component {
     constructor(props) {
@@ -81,7 +81,7 @@ class Search extends Component {
                 </div>
                 
             </div>
-            <Link to="/viewOrderApi" style={{color:'black',fontWeight:'bold'}}>Orders</Link>
+            <Link to="/viewOrderApi" style={{color:'white'}}>Orders</Link>
             </>
         )
     }

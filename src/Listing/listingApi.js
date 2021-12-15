@@ -6,7 +6,7 @@ import Header from '../Header';
 import CostFilter from '../Filters/costFilter';
 import './listing.css';
 
-const url = "https://zomoapp.herokuapp.com/restaurant?mealtype_id="
+const url = "https://api-zoma.herokuapp.com/restaurant?mealtype_id="
 
 class Listing extends Component {
     constructor(props){

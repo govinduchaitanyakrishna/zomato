@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import axios from 'axios';
 
-const url = "https://zomoapp.herokuapp.com/filter"
+const url = "https://api-zoma.herokuapp.com/filter"
 
 class CostFilter extends Component{
     filterCost = (event) => {

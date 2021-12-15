@@ -17,7 +17,7 @@
 }
 
 #QuickSubHeading{
-  color:black;
+  color:gray;
   font-size:20px;
   margin-top: 20px;
   position: absolute;
@@ -29,8 +29,8 @@
   height: 180px;
   width: 30%;
   -webkit-box-shadow: 0 0 8px 8px grey;
-  -moz-box-shadow: 0 0 8px 8px grey;
-  box-shadow: 0  5px 5px black;
+  -moz-box-shadow: 0 0  8px grey;
+  box-shadow: 0 5px 15px black;
   background-color: white;
   display: inline-block;
   margin-left: 2%;
