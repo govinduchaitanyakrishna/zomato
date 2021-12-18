@@ -81,7 +81,7 @@ class Search extends Component {
                 </div>
                 
             </div>
-            {/* <Link to="/viewOrderApi" style={{color:'white'}}>Orders</Link> */}
+            <Link to="/viewOrder" style={{color:'white'}}>Orders</Link>
             </>
         )
     }
