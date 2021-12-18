@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import ViewDisplay from './ViewOrderDisplay';
+import Header from '../Header';
 import axios from 'axios';
 
 const url = "https://api-zoma.herokuapp.com/viewOrder";
@@ -8,7 +9,7 @@ const url1 = "https://api-zoma.herokuapp.com/updateOrder"
 class ViewOrder extends Component {
     constructor(){
         super()
-
+        
         this.state={
             orders:''
         }
@@ -23,6 +24,7 @@ class ViewOrder extends Component {
         }
         return(
             <div className="container">
+                <Header/>
                 <ViewDisplay orderData={this.state.orders}/>
             </div>
         )
