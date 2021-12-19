@@ -1,9 +1,9 @@
 import React,{Component} from 'react';
 import axios from 'axios';
 import ListingDisplay from './listingDisplay';
-import CuisineFilter from '../Filters/cuisineFilter';
 import Header from '../Header';
-import CostFilter from '../Filters/costFilter';
+import CuisineFilter from '../filters/cuisineFilter';
+import CostFilter from '../filters/costFilter';
 import './listing.css';
 
 const url = "https://api-zoma.herokuapp.com/restaurant?mealtype_id="
