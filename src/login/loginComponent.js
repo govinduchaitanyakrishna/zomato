@@ -78,10 +78,10 @@ class Login extends Component {
             
             
         <div>
-        <div className="divisions row justify-content-center">
+        <div style={{marginTop:"-3%"}} className="divisions row justify-content-center">
             <Link to="/"><span id="underline">e!</span></Link>
         </div>
-            <section class="login-block">
+            <section class="login-block" style={{marginTop:"-3%"}}>
             <div class="container">
             <div class="row">
                 <div class="col-md-4 login-sec">

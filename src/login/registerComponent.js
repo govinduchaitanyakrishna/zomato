@@ -6,6 +6,7 @@ const url ="https://app-logout.herokuapp.com/api/auth/register";
 
 
 class Register extends Component {
+    
     constructor(props){
         super(props)
 
@@ -35,6 +36,8 @@ class Register extends Component {
         )
         .then(this.props.history.push('/login'))
     }
+
+    
 
     render(){
         return(
@@ -84,12 +87,12 @@ class Register extends Component {
             //     </div>
             // </div>
 
-
+<div>
     <div>
-        <div className="divisions row justify-content-center">
+        <div style={{marginTop:"-3%"}} className="divisions row justify-content-center">
             <Link to="/"><span id="underline">e!</span></Link>
         </div>
-            <section class="login-block">
+            <section class="login-block" style={{marginTop:"-3%"}}>
             <div class="container">
             <div class="row">
                 <div class="col-md-4 login-sec">
@@ -136,7 +139,7 @@ class Register extends Component {
                         </ol>
                     <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-            <img class="d-block img-fluid" style={{height:"550px"}} src="https://i.ibb.co/ZNrKZPn/image1-Logindisplay.jpg" alt="First slide"/>
+            <img class="d-block img-fluid" style={{height:"573px"}} src="https://i.ibb.co/ZNrKZPn/image1-Logindisplay.jpg" alt="First slide"/>
             <div class="carousel-caption d-none d-md-block">
                 <div class="banner-text">
                     <h2>This is Heaven</h2>
@@ -145,7 +148,7 @@ class Register extends Component {
         </div>
             </div>
             <div class="carousel-item">
-            <img class="d-block img-fluid" style={{height:"550px"}} src="https://i.ibb.co/cCCqbpN/image2-Logindisplay.jpg" alt="First slide"/>
+            <img class="d-block img-fluid" style={{height:"573px"}} src="https://i.ibb.co/cCCqbpN/image2-Logindisplay.jpg" alt="First slide"/>
             <div class="carousel-caption d-none d-md-block">
                 <div class="banner-text">
                     <h2>This is Heaven</h2>
@@ -153,15 +156,15 @@ class Register extends Component {
                 </div>	
             </div>
             </div>
-            {/* <div class="carousel-item">
-            <img class="d-block img-fluid" src="https://images.pexels.com/photos/872957/pexels-photo-872957.jpeg" alt="First slide"/>
+            <div class="carousel-item">
+            <img class="d-block img-fluid" style={{height:"573px"}} src="https://images.pexels.com/photos/872957/pexels-photo-872957.jpeg" alt="First slide"/>
             <div class="carousel-caption d-none d-md-block">
                 <div class="banner-text">
                     <h2>This is Heaven</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
                 </div>	
             </div>
-        </div> */}
+        </div>
                     </div>	   
                     
                 </div>
@@ -169,6 +172,7 @@ class Register extends Component {
         </div>
     </div>    
 </section>
+</div>
 </div>
             
         )

@@ -26,7 +26,7 @@ class Listing extends Component {
             <>
                 <Header/>
                 <div className="row mainContainer">
-                    <div className="col-sm-3 ml-2 mt-4 filter">
+                    <div className="col-sm-3 ml-2 mt-4 filter" style={{borderRadius: '15px'}}>
                         <h3>Filters</h3>
                         <CuisineFilter restPerCuisine={(data) => {this.setDataAsPerFilter(data)}}/> 
                         <CostFilter restPerCost={(data) => {this.setDataAsPerFilter(data)}}/>     

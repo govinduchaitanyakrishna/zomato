@@ -22,7 +22,7 @@ const ListingDisplay = (props) => {
             if(listData.length>0){
                 return listData.slice(pagination.start, pagination.end).map((item) => {
                     return(
-                        <div className="container-fluid mb-3 mr-3 filter2" key={item.restaurant_id}>
+                        <div className="container-fluid mb-3 mr-3 filter2" key={item.restaurant_id} style={{borderRadius: '15px'}}>
                             <div className="image_con">
                                 <img src={item.restaurant_thumb} alt="Business" className="Img"/>
                             </div>

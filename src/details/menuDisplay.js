@@ -23,7 +23,7 @@ class MenuDisplay extends Component {
                         <div className="container" key={item.menu_id}>
                             <div className="row details">
                                 <div className="col-sm-4">
-                                    <img src={item.menu_image} alt="restaurant_image" style={{boxShadow:"0 5px 10px black"}} className="restImage" />
+                                    <img src={item.menu_image} alt="restaurant_image" style={{boxShadow:"0 5px 10px black",borderRadius:"5px"}} className="restImage" />
                                 </div>
                                 <div className="col-md-5">
                                     <h3>{item.menu_id}. {item.menu_name}</h3>

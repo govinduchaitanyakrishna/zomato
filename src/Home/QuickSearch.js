@@ -9,9 +9,9 @@ const QuickSearch = (props) => {
             return quickData.map((item) => {
                 return(
                     <Link to={`/list/${item.mealtype_id}`}>
-                        <div class="tileContainer" key={item.mealtype_id}>
+                        <div class="tileContainer" key={item.mealtype_id} style={{borderRadius:"15px"}}>
                             <div class="tileComponent1">
-                                <img src={item.meal_image} alt="breakfast"/>
+                                <img src={item.meal_image} style={{borderRadius:"15px 0px 0px 15px"}} alt="breakfast"/>
                             </div>
                             <div class="tileComponent2">
                                 <div class="componentHeading">

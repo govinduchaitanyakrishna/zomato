@@ -61,19 +61,20 @@ class Search extends Component {
                     <span className="mb-3 d-flex justify-content-center logo ">e!</span>
                 </div>
 
-                <div className="container d-flex justify-content-center heading" style={{color: "#007bff"}}>
+                <div className=" d-flex justify-content-center heading" id="container d-flex justify-content-center heading" style={{color: "#007bff"}}>
                     Find The Best Reståurânts, Câfes and Bârs
                 </div>
 
                 <div className="row align-items-center justify-content-center">   
                     <div style={{float:'left'}}>
-                        <select id="city" onChange={this.handleCity}>
+                        <select id="city" onChange={this.handleCity} style={{height:"30px"}}>
                             <option>---Select Location---</option>
                             {this.renderCity(this.state.location)}
                         </select>
                     </div>
+                    &nbsp;
                     <div>
-                        <select id="restaurants" onChange={this.handleRest}>
+                        <select id="restaurants" onChange={this.handleRest} style={{height:"30px"}}>
                         <option>---Select Restaurant---</option>
                             {this.renderRestaurants(this.state.restaurant)}
                         </select>

@@ -1,11 +1,11 @@
 /*------header------*/
- /* #headings{
-   background: #DE6262;  /* fallback for old browsers 
-   background: -webkit-linear-gradient(to bottom, #FFB88C, #DE6262);  /* Chrome 10-25, Safari 5.1-6 
+  #headings{
+   background: #DE6262;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to bottom, #FFB88C, #DE6262);  /* Chrome 10-25, Safari 5.1-6 */
    background: linear-gradient(to bottom, #FFB88C, #DE6262); 
     height:20%;
    
- } */
+ } 
 
  .myDark{
     background-color:black;

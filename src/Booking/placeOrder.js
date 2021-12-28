@@ -46,9 +46,9 @@ class PlaceOrder extends Component{
            return data.map((item) => {
                 return(
                     <>
-                        <div className="menu card" >
+                        <div className="menu card" style={{borderRadius:"15px"}}>
                             <div className="card-image" key={this.menu_id}>
-                                <img src={item.menu_image} alt="menuImage" style={{boxShadow:'0 5px 15px black'}}/>
+                                <img src={item.menu_image} alt="menuImage" style={{boxShadow:'0 5px 15px black',borderRadius:"15px 15px 0px 0px"}}/>
                             </div>
                             <div className="card-body">
                                 <h4>{item.menu_name}</h4>
