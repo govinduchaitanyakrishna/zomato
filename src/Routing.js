@@ -5,7 +5,7 @@ import Home from './Home/Home';
 import RestDetails from './details/restDetails';
 import PlaceOrder from './booking/placeOrder';
 import ViewOrder from './booking/ViewOrderApi';
-import Register from './login/registerComponent';
+import Register from './login/registerComponent'
 import Login from './login/loginComponent';
 
 const Routing = () => {
