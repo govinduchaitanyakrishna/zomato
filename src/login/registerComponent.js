@@ -114,7 +114,7 @@ class Register extends Component {
             
         </div>
             <label for="password" className="text-uppercase">Password</label>
-            <input className="form-control" name="password" value={this.state.password} id="password" placeholder="PASSWORD"
+            <input className="form-control" name="password" type="password" value={this.state.password} id="password" placeholder="PASSWORD"
             onChange={this.handleChange}/>
         </div>
             <div className="form-check">
