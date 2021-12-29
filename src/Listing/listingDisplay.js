@@ -5,7 +5,7 @@ import Pagination from './Pagination';
 
 const ListingDisplay = (props) => {
 
-    const [showPerPage] = useState(2);
+    const [showPerPage] = useState(3);
 
     const [pagination, setPagination] = useState({
         start: 0,
