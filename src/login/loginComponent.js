@@ -81,25 +81,25 @@ class Login extends Component {
         <div style={{marginTop:"-3%"}} className="divisions row justify-content-center">
             <Link to="/"><span id="underline">e!</span></Link>
         </div>
-            <section class="login-block" style={{marginTop:"-3%"}}>
-            <div class="container">
-            <div class="row">
-                <div class="col-md-4 login-sec">
-                    <h2 class="text-center">Login Now</h2>
-        <div class="form-group">
-            <label for="exampleInputEmail1" class="text-uppercase">Username</label>
+            <section className="login-block" style={{marginTop:"-3%"}}>
+            <div className="container">
+            <div className="row">
+                <div className="col-md-4 login-sec">
+                    <h2 className="text-center">Login Now</h2>
+        <div className="form-group">
+            <label for="exampleInputEmail1" className="text-uppercase">Username</label>
             <input className="form-control" id="exampleInputEmail1" name="email" type="email" placeholder="Email"value={this.state.email} onChange={this.handleChange}/>
             
         </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1" class="text-uppercase">Password</label>
+        <div className="form-group">
+            <label for="exampleInputPassword1" className="text-uppercase">Password</label>
             <input className="form-control" id="exampleInputPassword1" name="password" type="password" placeholder="Password"value={this.state.password} onChange={this.handleChange}/>
         </div>
         
         
-            <div class="form-check">
-            <label class="form-check-label">
-            {/* <input type="checkbox" class="form-check-input"/> */}
+            <div className="form-check">
+            <label className="form-check-label">
+            {/* <input type="checkbox" className="form-check-input"/> */}
             {/* <small>Remember Me</small> */}
             </label>
             <button className="btn btn-success" style={{marginLeft:"29%"}} onClick={this.handleSubmit}>
@@ -108,38 +108,38 @@ class Login extends Component {
         </div>
         
         
-        <div class="copy-text">Created with <i class="fa fa-heart"></i></div>
+        <div className="copy-text">Created with <i className="fa fa-heart"></i></div>
                 </div>
-                <div class="col-md-8 banner-sec">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <div className="col-md-8 banner-sec">
+                    <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+                        <ol className="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                             {/* <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> */}
                         </ol>
-                    <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-            <img class="d-block img-fluid" style={{height:"550px"}} src="https://i.ibb.co/ZNrKZPn/image1-Logindisplay.jpg" alt="First slide"/>
-            <div class="carousel-caption d-none d-md-block">
-                <div class="banner-text">
+                    <div className="carousel-inner" role="listbox">
+            <div className="carousel-item active">
+            <img className="d-block img-fluid" style={{height:"550px"}} src="https://i.ibb.co/ZNrKZPn/image1-Logindisplay.jpg" alt="First slide"/>
+            <div className="carousel-caption d-none d-md-block">
+                <div className="banner-text">
                     <h2>This is Heaven</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
                 </div>	
         </div>
             </div>
-            <div class="carousel-item">
-            <img class="d-block img-fluid" style={{height:"550px"}} src="https://i.ibb.co/cCCqbpN/image2-Logindisplay.jpg" alt="First slide"/>
-            <div class="carousel-caption d-none d-md-block">
-                <div class="banner-text">
+            <div className="carousel-item">
+            <img className="d-block img-fluid" style={{height:"550px"}} src="https://i.ibb.co/cCCqbpN/image2-Logindisplay.jpg" alt="First slide"/>
+            <div className="carousel-caption d-none d-md-block">
+                <div className="banner-text">
                     <h2>This is Heaven</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
                 </div>	
             </div>
             </div>
-            {/* <div class="carousel-item">
-            <img class="d-block img-fluid" src="https://images.pexels.com/photos/872957/pexels-photo-872957.jpeg" alt="First slide"/>
-            <div class="carousel-caption d-none d-md-block">
-                <div class="banner-text">
+            {/* <div className="carousel-item">
+            <img className="d-block img-fluid" src="https://images.pexels.com/photos/872957/pexels-photo-872957.jpeg" alt="First slide"/>
+            <div className="carousel-caption d-none d-md-block">
+                <div className="banner-text">
                     <h2>This is Heaven</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
                 </div>	

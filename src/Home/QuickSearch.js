@@ -9,15 +9,15 @@ const QuickSearch = (props) => {
             return quickData.map((item) => {
                 return(
                     <Link to={`/list/${item.mealtype_id}`}>
-                        <div class="tileContainer" key={item.mealtype_id} style={{borderRadius:"15px"}}>
-                            <div class="tileComponent1">
+                        <div className="tileContainer" key={item.mealtype_id} style={{borderRadius:"15px"}}>
+                            <div className="tileComponent1">
                                 <img src={item.meal_image} style={{borderRadius:"15px 0px 0px 15px"}} alt="breakfast"/>
                             </div>
-                            <div class="tileComponent2">
-                                <div class="componentHeading">
+                            <div className="tileComponent2">
+                                <div className="componentHeading">
                                     {item.mealtype}
                                 </div>
-                                <div class="componentSubHeading">
+                                <div className="componentSubHeading">
                                     {item.content}
                                 </div>
                             </div>
@@ -28,7 +28,7 @@ const QuickSearch = (props) => {
         }else{
             return(
                 <div>
-                   <img src="https://i.ibb.co/b17cWJg/food.gif"/>
+                   <img src="https://i.ibb.co/b17cWJg/food.gif" alt="gif jpeg"/>
                 </div>
             )
             
@@ -41,7 +41,7 @@ const QuickSearch = (props) => {
                 Quick Searches
             </span>
             <span id="QuickSubHeading">
-                Discover reståurânts by type of meal
+                Discover restaurants by type of meal
             </span>
             <div id="mainTileContainer">
                 {listMeal(props)}

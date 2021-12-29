@@ -42,7 +42,7 @@ class MenuDisplay extends Component {
         }else{
             return(
                 <div >
-                   <img src="https://i.ibb.co/b17cWJg/food.gif" style={{alignItems: 'center'}}/>
+                   <img src="https://i.ibb.co/b17cWJg/food.gif" style={{alignItems: 'center'}} alt="food"/>
                 </div>
             )
             

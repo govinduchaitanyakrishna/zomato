@@ -62,7 +62,7 @@ class PlaceOrder extends Component{
         }else{
             return(
                 <div>
-                    <img src="https://i.ibb.co/b17cWJg/food.gif"/>
+                    <img src="https://i.ibb.co/b17cWJg/food.gif" alt="gif"/>
                 </div>
             )
         }
