@@ -30,7 +30,7 @@ const ListingDisplay = (props) => {
                                 <div style={{fontSize:'25px', color:'blue', fontWeight: 'bold'}}>
                                  <Link to={`/details/${item.restaurant_id}`}>{item.restaurant_name}</Link>    
                                 </div>
-                                    <div style={{fontSize:'19px', fontWeight: 'bold'}}>
+                                <div style={{fontSize:'19px', fontWeight: 'bold'}}>
                                     {item.address}<br/>
                                     <span className="badge badge-danger">
                                         {item.cuisines[0].cuisine_name}

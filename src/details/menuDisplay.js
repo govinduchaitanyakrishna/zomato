@@ -32,6 +32,7 @@ class MenuDisplay extends Component {
                                 </div>
                                 <div className='col-sm-2'>
                                     <button type="button" className="btn btn-info" onClick={() => {this.placeOrder(item.menu_id)}}><i className="fas fa-plus"></i></button>
+                                    &nbsp;
                                     <button type="button" className="btn btn-danger" onClick={() => {this.removeOrder(item.menu_id)}}><i className="fas fa-minus"></i></button>
                                 </div>
                             </div>
