@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
 import './loginComponent.css'
 //const url = "https://developerjwt.herokuapp.com/api/auth/register";
-const url ="https://app-logout.herokuapp.com/api/auth/register";
+const url ="https://login-api-logout.herokuapp.com/api/auth/register";
 
 
 class Register extends Component {
