@@ -24,7 +24,8 @@ const ListingDisplay = (props) => {
                     return(
                         <div className="container-fluid mb-3 mr-3 filter2" key={item.restaurant_id} style={{borderRadius: '15px'}}>
                             <div className="image_con">
-                                <img src={item.restaurant_thumb} alt="Business" className="Img"/>
+                                {/* <img src={item.restaurant_thumb} alt="Business" className="Img"/> */}
+                                <Link to={`/details/${item.restaurant_id}`}><img src={item.restaurant_thumb} alt="Business" className="Img"/></Link>
                             </div>
                             <div className="display">
                                 <div style={{fontSize:'25px', color:'blue', fontWeight: 'bold'}}>
