@@ -10,7 +10,7 @@ const ViewDisplay = (props) => {
 
                         <td>{item.id}</td>
                         <td>{item.hotel_name}</td>
-                        <td>{item.name}</td>
+                        {/* <td>{item.name}</td> */}
                         <td>{item.phone}</td>
                         <td>{item.email}</td>
                         <td>{item.address}</td>
@@ -31,7 +31,7 @@ const ViewDisplay = (props) => {
                     <tr>
                         <th>Id</th>
                         <th>Rest Name</th>
-                        <th>Name</th>
+                        {/* <th>Name</th> */}
                         <th>Phone</th>
                         <th>Email</th>
                         <th>Address</th>
