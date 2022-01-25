@@ -3,7 +3,7 @@ import axios from 'axios';
 import ListingDisplay from './listingDisplay';
 import Header from '../Header';
 import CuisineFilter from '../filters/cuisineFilter';
-import CostFilter from '../filters/costFilter';
+import CostFilter from '../filters/costfilter';
 import './listing.css';
 
 const url = "https://api-zoma.herokuapp.com/restaurant?mealtype_id="
