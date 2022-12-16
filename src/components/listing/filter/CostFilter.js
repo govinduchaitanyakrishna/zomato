@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { Component } from "react";
 
-const url = "https://edumatoapifor.herokuapp.com/filter/";
+const url = "https://zomo-api.onrender.com/filter/";
 class CostFilter extends Component {
   constructor(props) {
     super();

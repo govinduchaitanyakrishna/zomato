@@ -4,7 +4,7 @@ import Header from "../Header/Header";
 import ViewOrdersDisplay from "./ViewOrdersDisplay";
 import "./ViewOrders.css";
 
-const filterurl = "https://edumatoapifor.herokuapp.com/viewOrders/";
+const filterurl = "https://zomo-api.onrender.com/viewOrders/";
 
 const limit = 2;
 let emailid = "";

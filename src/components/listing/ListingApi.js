@@ -6,7 +6,7 @@ import SortFilter from "./filter/SortFilter";
 import ListingDisplay from "./ListingDisplay";
 import "./ListingApi.css";
 
-const filterurl = "https://edumatoapifor.herokuapp.com/filter/";
+const filterurl = "https://zomo-api.onrender.com/filter/";
 
 class ListingApi extends Component {
   constructor(props) {

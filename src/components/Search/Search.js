@@ -3,10 +3,10 @@ import {Link} from 'react-router-dom';
 import FilteredRestaurants from "./FilteredRestaurants";
 import "./Search.css";
 
-const locationurl = "https://edumatoapifor.herokuapp.com/location";
+const locationurl = "https://zomo-api.onrender.com/location";
 const restauranturl =
-  "https://edumatoapifor.herokuapp.com/restaurants?stateId=";
-const url = "https://login-api-logout.herokuapp.com/api/auth/userinfo";
+  "https://zomo-api.onrender.com/restaurants?stateId=";
+const url = "https://login-api-logout.onrender.com/api/auth/userinfo";
 class Search extends Component {
   constructor(props) {
     super();

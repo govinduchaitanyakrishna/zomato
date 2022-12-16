@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./RegisterComp.css";
 
 // const Posturl = "https://loginapiedu.herokuapp.com/api/auth/register";
-const Posturl = "https://login-api-logout.herokuapp.com/api/auth/register";
+const Posturl = "https://login-api-logout.onrender.com/api/auth/register";
 class RegisterComp extends Component {
   constructor(props) {
     super(props);

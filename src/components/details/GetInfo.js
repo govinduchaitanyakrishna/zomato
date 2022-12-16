@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./GetInfo.css";
 
-const Posturl = "https://edumatoapifor.herokuapp.com/placeOrder";
+const Posturl = "https://zomo-api.onrender.com/placeOrder";
 class GetInfo extends Component {
   constructor(props) {
     super(props);
@@ -64,7 +64,7 @@ class GetInfo extends Component {
         <>
           <form
             method="POST"
-            action="https://edupayment.herokuapp.com/paynow"
+            action="https://payment-w59g.onrender.com/paynow"
           >
             <div className="info-inner-box">
               <h1 className="res-name">{this.props.resName}</h1>

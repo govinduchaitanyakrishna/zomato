@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
-const url = "https://login-api-logout.herokuapp.com/api/auth/userInfo";
+const url = "https://login-api-logout.onrender.com/api/auth/userInfo";
 class Header extends Component {
   constructor(props) {
     super();
