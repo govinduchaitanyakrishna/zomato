@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import QuickSearch from './QuickSearch'
 
-const url = "https://zomo-api.onrender.com/quicksearch";
+const url = "https://zomato-api-7i2q.onrender.com/QuickSearch";
 
 class QuickAPI extends Component{
     constructor(props){
