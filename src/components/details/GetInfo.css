@@ -1,4 +1,4 @@
-button{
+button {
   font: inherit;
 }
 
@@ -23,7 +23,7 @@ button{
   padding: 2.4rem 2.4rem 0 2.4rem;
 }
 
-.res-name{
+.res-name {
   color: var(--dark-blue);
   font-size: 32px;
   font-weight: 600;
@@ -67,7 +67,7 @@ button{
   display: block;
 }
 
-.input-field{
+.input-field {
   width: 94%;
   display: flex;
   flex-direction: column;
@@ -75,7 +75,8 @@ button{
   margin-bottom: 1.5rem;
 }
 
-.input-field input[type="text"], #address{
+.input-field input[type="text"],
+#address {
   height: 50px;
   color: var(--light-blue);
   font: inherit;
@@ -83,18 +84,16 @@ button{
   padding: 1rem;
 }
 
-#address{
-   height: 150px;
-   padding: 0.6rem 2rem 1rem 1rem;
+#address {
+  height: 150px;
+  padding: 0.6rem 2rem 1rem 1rem;
   margin-bottom: 2rem;
 }
 
-.field{
-  color : var(--dark-blue);
+.field {
+  color: var(--dark-blue);
   font-size: 18px;
 }
-
-
 
 @media screen and (max-width: 650px) {
   .info-sec-box {
@@ -124,4 +123,3 @@ button{
     font-size: 14px;
   }
 }
-

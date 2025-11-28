@@ -31,9 +31,8 @@ class CostFilter extends Component {
       if (res.data.length > 0) {
         this.props.resPerCuisine(res.data);
         this.props.checkData(true);
-
       } else {
-        this.props.checkData(false)
+        this.props.checkData(false);
       }
     });
   };

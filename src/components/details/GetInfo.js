@@ -46,26 +46,22 @@ class GetInfo extends Component {
     fetch(Posturl, {
       method: "POST",
       headers: {
-        "accept": "application/json",
+        accept: "application/json",
         "content-type": "application/json",
       },
       body: JSON.stringify(myOrderInfo),
     }).then(console.log("payment gateway"));
   };
 
-
   payCross = () => {
-      this.props.paynow("");
-  }
+    this.props.paynow("");
+  };
 
   renderContent = () => {
     if (sessionStorage.getItem("userData")) {
       return (
         <>
-          <form
-            method="POST"
-            action="https://payment-w59g.onrender.com/paynow"
-          >
+          <form method="POST" action="https://payment-w59g.onrender.com/paynow">
             <div className="info-inner-box">
               <h1 className="res-name">{this.props.resName}</h1>
               <img
@@ -165,22 +161,19 @@ class GetInfo extends Component {
         </div>
       );
     }
-  }
+  };
 
   render() {
     return (
       <>
         <div className={`info-section ${this.props.payClassName}`}>
-          <div className="info-sec-box">
-            {this.renderContent()}
-          </div>
+          <div className="info-sec-box">{this.renderContent()}</div>
 
           <div className="pay-overlay"></div>
         </div>
       </>
     );
   }
-
 }
 
 export default GetInfo;

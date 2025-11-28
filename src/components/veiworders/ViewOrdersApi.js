@@ -32,7 +32,7 @@ class ViewOrders extends Component {
 
   renderContent = () => {
     if (sessionStorage.getItem("userData")) {
-      emailid = sessionStorage.getItem("userData").split(',')[1]
+      emailid = sessionStorage.getItem("userData").split(",")[1];
       return (
         <>
           <h1 className="orders-text">Your Orders</h1>
@@ -56,18 +56,14 @@ class ViewOrders extends Component {
           </div>
         </>
       );
-      
-      
-    }
-    else{
+    } else {
       return (
         <div>
           <h1 style={{ margin: "2rem" }}>Login first to see booking</h1>
         </div>
       );
     }
-
-  }
+  };
 
   render() {
     return (

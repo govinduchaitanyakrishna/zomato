@@ -181,7 +181,7 @@ h4 {
   transform: translateX(-50%);
 }
 
-.img-gal{
+.img-gal {
   width: 100%;
   min-height: 75vh;
   background-repeat: no-repeat;
@@ -189,7 +189,7 @@ h4 {
   background-position: center center;
 }
 
-.img-gal img{
+.img-gal img {
   width: 90%;
   height: 70vh;
   object-fit: cover;
@@ -263,21 +263,22 @@ h4 {
   }
 }
 
-.prev-gal, .next-gal{
+.prev-gal,
+.next-gal {
   font-size: 50px;
   position: absolute;
   top: 45%;
   cursor: pointer;
 }
 
-.prev-gal{
+.prev-gal {
   left: -7%;
 }
 
-.next-gal{
+.next-gal {
   right: -5%;
 }
 
 .slick-prev {
-    left: -69px;
+  left: -69px;
 }

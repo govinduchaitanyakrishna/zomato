@@ -3,10 +3,10 @@ import {Link} from 'react-router-dom';
 import FilteredRestaurants from "./FilteredRestaurants";
 import "./Search.css";
 
-const locationurl = "https://zomo-api.onrender.com/location";
+const locationurl = "https://zomato-api-7i2q.onrender.com/location";
 const restauranturl =
-  "https://zomo-api.onrender.com/restaurants?stateId=";
-const url = "https://login-api-logout.onrender.com/api/auth/userinfo";
+  "https://zomato-api-7i2q.onrender.com/restaurants?stateId=";
+const url = "https://zomato-api-7i2q.onrender.com/api/auth/userinfo";
 class Search extends Component {
   constructor(props) {
     super();

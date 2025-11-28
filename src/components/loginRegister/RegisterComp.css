@@ -5,14 +5,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-image:
-    url("https://i.ibb.co/CBWKh6H/pexels-chan-walrus-941861.jpg");
+  background-image: url("https://i.ibb.co/CBWKh6H/pexels-chan-walrus-941861.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.form_container,.login-form_container {
+.form_container,
+.login-form_container {
   width: 500px;
   min-height: 70vh;
   background-color: white;
@@ -22,19 +22,18 @@
   position: relative;
 }
 
-.login-form_container{
+.login-form_container {
   min-height: 90vh;
   margin-left: 12rem;
 }
 
-.title_container{
+.title_container {
   text-align: center;
   font-size: 30px;
   margin: 1rem;
 }
 
-
-.input-field{
+.input-field {
   width: 94%;
   display: flex;
   flex-direction: column;
@@ -42,7 +41,8 @@
   margin-bottom: 1rem;
 }
 
-.input-field input[type="text"],.input-field input[type="password"] {
+.input-field input[type="text"],
+.input-field input[type="password"] {
   height: 40px;
   color: var(--light-blue);
   font: inherit;
@@ -50,19 +50,19 @@
   padding: 0.7rem;
 }
 
-.field{
-  color : var(--dark-blue);
+.field {
+  color: var(--dark-blue);
   font-size: 16px;
 }
 
-.btns{
+.btns {
   width: 100%;
   display: flex;
   justify-content: center;
   margin-top: 4rem;
 }
 
-.register{
+.register {
   width: 80%;
   height: 50px;
   border: none;
@@ -74,11 +74,11 @@
   transition: background 100ms ease-in-out;
 }
 
-.register:hover{
-  background-color: rgba(36, 74, 237,0.945);
+.register:hover {
+  background-color: rgba(36, 74, 237, 0.945);
 }
 
-.msg{
+.msg {
   width: 500px;
   height: 55px;
   background-color: white;
@@ -89,14 +89,31 @@
   border-radius: 5px;
 }
 
-@media screen and (max-width : 850px) {
-  .login-form_container{
+@media screen and (max-width: 850px) {
+  .login-form_container {
     margin-left: 0;
   }
 
-  .form_wrapper{
+  .form_wrapper {
     align-items: center;
   }
+}
+
+.img-gallery-btn {
+  position: absolute;
+  right: 100px;
+  bottom: 80px;
+  border: none;
+  width: 242px;
+  height: 48px;
+  padding: 13px 13px 12px 16px;
+  opacity: 0.8;
+  border-radius: 3px;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark-blue);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 580px) {

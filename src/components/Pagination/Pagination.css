@@ -51,9 +51,9 @@ li.restricted {
   cursor: not-allowed;
 }
 
-li.restricted:hover{
+li.restricted:hover {
   color: #8c96ab;
-    background-color: #fff;
+  background-color: #fff;
 }
 
 @media screen and (max-width: 768px) {

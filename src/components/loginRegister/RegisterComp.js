@@ -41,7 +41,7 @@ class RegisterComp extends Component {
       .then((data) => {
         this.setState({ isPresent: data.isPresent });
         if (!data.isPresent) {
-          this.props.history.push('/login')
+          this.props.history.push("/login");
         }
       });
   };

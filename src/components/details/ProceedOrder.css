@@ -96,7 +96,8 @@ button {
   position: relative;
 }
 
-.add,.remove {
+.add,
+.remove {
   background-color: var(--light-green);
   color: white;
   font-size: 18px;
@@ -111,20 +112,20 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
-.remove{
+.remove {
   left: 70%;
   transform: translateX(-40%);
   background-color: var(--dark-red);
 }
 
-.order-list{
+.order-list {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
   margin-bottom: 2rem;
 }
 
-.order-box{
+.order-box {
   display: flex;
   width: 130px;
   height: 70px;
@@ -132,16 +133,15 @@ button {
   align-items: center;
   padding: 5px;
   border: 1px solid #9eadc4;
-
 }
 
-.order-box h3{
+.order-box h3 {
   font-size: 22px;
   color: var(--dark-blue);
   font-weight: 500;
 }
 
-.order-box-img{
+.order-box-img {
   width: 80px;
   height: 60px;
   border-radius: 5px;
@@ -213,7 +213,6 @@ button {
   display: block;
 }
 
-
 @media screen and (max-width: 650px) {
   .proceed-sec-box {
     min-width: 360px;
@@ -237,7 +236,7 @@ button {
     padding: 2rem 2rem 0 2rem;
   }
 
-  .proceed-overlay{
+  .proceed-overlay {
     min-height: 240vh;
   }
   .menu-info {
@@ -247,10 +246,11 @@ button {
     width: 100px;
     height: 90px;
   }
-  .add,.remove {
-  font-size: 16px;
-  width: 30px;
-}
+  .add,
+  .remove {
+    font-size: 16px;
+    width: 30px;
+  }
 
   .res_name {
     font-size: 28px;

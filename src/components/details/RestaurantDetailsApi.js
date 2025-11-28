@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import RestaurantDetailsDisplay from "./RestaurantDetailsDisplay";
 
-const resurl = "https://zomo-api.onrender.com/details/";
-const resMenu_url = "https://zomo-api.onrender.com/menu/";
+const resurl = "https://zomato-api-7i2q.onrender.com/details/";
+const resMenu_url = "https://zomato-api-7i2q.onrender.com/menu/";
 
 class RestaurantDetails extends Component {
   constructor(props) {

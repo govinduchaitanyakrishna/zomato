@@ -139,14 +139,17 @@ class RestaurantDetails extends Component {
           </div>
         </div>
       );
-    }else{
-      return(
-          <div>
-             <img style={{marginLeft:'35%'}} src="https://i.ibb.co/b17cWJg/food.gif" alt="gif jpeg"/>
-          </div>
-      )
-      
-  }
+    } else {
+      return (
+        <div>
+          <img
+            style={{ marginLeft: "35%" }}
+            src="https://i.ibb.co/b17cWJg/food.gif"
+            alt="gif jpeg"
+          />
+        </div>
+      );
+    }
   };
 
   renderGallery = () => {

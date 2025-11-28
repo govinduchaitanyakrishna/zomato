@@ -10,7 +10,7 @@ class LoginComp extends Component {
     this.state = {
       email: "",
       password: "",
-      message : ""
+      message: "",
     };
   }
 
@@ -27,24 +27,28 @@ class LoginComp extends Component {
       },
       body: JSON.stringify(this.state),
     })
-    .then((res) => res.json())
-    .then((data) => {
-        if(!data.auth){
-            this.setState({message : data.token})
+      .then((res) => res.json())
+      .then((data) => {
+        if (!data.auth) {
+          this.setState({ message: data.token });
+        } else {
+          sessionStorage.setItem("ltk", data.token);
+          this.props.history.push("/");
         }
-        else{
-            sessionStorage.setItem("ltk", data.token)
-            this.props.history.push('/')
-        }
-    })
+      });
   };
 
   render() {
     return (
       <>
         <div className="form_wrapper">
-            <h2 className={this.state.message ? 'msg' : ''}>{this.state.message}</h2>
+          <h2 className={this.state.message ? "msg" : ""}>
+            {this.state.message}
+          </h2>
           <div className="login-form_container">
+            <button className="img-gallery-btn">
+              <Link to="/">back</Link>
+            </button>
             <h2 className="title_container">Login</h2>
             <div className="form-feilds">
               <div className="input-field">

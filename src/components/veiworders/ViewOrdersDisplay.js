@@ -6,13 +6,13 @@ class ViewOrdersDisplay extends Component {
     super(props);
   }
   renderOrder = (orders) => {
-    return orders.map((item,index) => {
+    return orders.map((item, index) => {
       return (
         <div key={index}>
-            <div
-              className="item-img"
-              style={{ backgroundImage: "url(" + item.menu_image + ")" }}
-            ></div>
+          <div
+            className="item-img"
+            style={{ backgroundImage: "url(" + item.menu_image + ")" }}
+          ></div>
           <span className="menu-name">
             <h4>{item.menu_name}</h4>
             <h4>₹{item.menu_price}</h4>
@@ -23,7 +23,7 @@ class ViewOrdersDisplay extends Component {
   };
   renderOrderItems = () => {
     if (this.props.orders_list) {
-      return this.props.orders_list.map((item,index) => {
+      return this.props.orders_list.map((item, index) => {
         return (
           <tr key={index}>
             <td>{item.restaurantName}</td>
@@ -41,7 +41,6 @@ class ViewOrdersDisplay extends Component {
   };
 
   render() {
-    
     return (
       <>
         <table>
@@ -58,7 +57,7 @@ class ViewOrdersDisplay extends Component {
           {this.renderOrderItems()}
         </table>
       </>
-    )
+    );
   }
 }
 export default ViewOrdersDisplay;

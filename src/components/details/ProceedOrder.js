@@ -100,7 +100,7 @@ class ProceedOrtder extends Component {
 
   renderMenuList = (orders) => {
     if (orders) {
-      return orders.map((item,index) => {
+      return orders.map((item, index) => {
         return (
           <div className="order-box" key={index}>
             <div
@@ -128,54 +128,52 @@ class ProceedOrtder extends Component {
   };
 
   render() {
-    
-      return (
-        <>
-          <div className={`proceed-section ${this.props.proceedClassName}`}>
-            <div className="proceed-sec-box">
-              <div className="proceed-inner-box">
-                <h1 className="res_name">{this.props.resName}</h1>
-                <img
-                  src="https://i.ibb.co/vzTPcc1/rounded-stencil-x.jpg"
-                  alt="x-mark"
-                  ref="cross"
-                  className="cross"
-                />
-                <div className="order-list">
-                  {this.renderMenuList(this.state.myOrders)}
-                </div>
-                {this.renderMenu()}
+    return (
+      <>
+        <div className={`proceed-section ${this.props.proceedClassName}`}>
+          <div className="proceed-sec-box">
+            <div className="proceed-inner-box">
+              <h1 className="res_name">{this.props.resName}</h1>
+              <img
+                src="https://i.ibb.co/vzTPcc1/rounded-stencil-x.jpg"
+                alt="x-mark"
+                ref="cross"
+                className="cross"
+              />
+              <div className="order-list">
+                {this.renderMenuList(this.state.myOrders)}
               </div>
-              <div className="total-box">
-                <div className="total-price">
-                  <h1 className="total-text">Total</h1>
-                  <h1 className="total-val">₹{this.state.totalPrice}</h1>
-                </div>
-                <button
-                  className="pay-now"
-                  onClick={() => {
-                    this.paynow("show-pay");
-                    this.props.proceed("");
-                  }}
-                >
-                  Pay Now
-                </button>
-              </div>
+              {this.renderMenu()}
             </div>
-            <div className="proceed-overlay"></div>
+            <div className="total-box">
+              <div className="total-price">
+                <h1 className="total-text">Total</h1>
+                <h1 className="total-val">₹{this.state.totalPrice}</h1>
+              </div>
+              <button
+                className="pay-now"
+                onClick={() => {
+                  this.paynow("show-pay");
+                  this.props.proceed("");
+                }}
+              >
+                Pay Now
+              </button>
+            </div>
           </div>
-          <GetInfo
-            payClassName={this.state.payClassName}
-            paynow={(pclassname) => {
-              this.paynow(pclassname);
-            }}
-            resName={this.props.resName}
-            totalPrice={this.state.totalPrice}
-            orders={this.state.myOrders}
-          />
-        </>
-      );
-    
+          <div className="proceed-overlay"></div>
+        </div>
+        <GetInfo
+          payClassName={this.state.payClassName}
+          paynow={(pclassname) => {
+            this.paynow(pclassname);
+          }}
+          resName={this.props.resName}
+          totalPrice={this.state.totalPrice}
+          orders={this.state.myOrders}
+        />
+      </>
+    );
   }
 
   componentDidMount() {

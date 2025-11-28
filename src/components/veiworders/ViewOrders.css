@@ -15,19 +15,19 @@ h4 {
   margin: 0;
 }
 
-button{
-    font: inherit;
+button {
+  font: inherit;
 }
 
-.orders-text{
-  color: var(--dark-blue); 
+.orders-text {
+  color: var(--dark-blue);
   margin: 2rem 2rem 1rem;
 }
 
-.orders-box{
-    width: 95%;
-    min-height: 70vh;
-    margin-inline: auto;
+.orders-box {
+  width: 95%;
+  min-height: 70vh;
+  margin-inline: auto;
 }
 
 /*ReactPaginate styles */
@@ -89,10 +89,8 @@ button{
   color: #192f60;
 }
 
-
-
 @media screen and (max-width: 768px) {
-  .pagination-sec-order{
+  .pagination-sec-order {
     margin-top: -30px;
   }
 }
