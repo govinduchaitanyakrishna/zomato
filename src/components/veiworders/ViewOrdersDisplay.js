@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import "./ViewOrdersDisplay.css";
 
 class ViewOrdersDisplay extends Component {
-  constructor(props) {
-    super(props);
-  }
   renderOrder = (orders) => {
     return orders.map((item, index) => {
       return (
