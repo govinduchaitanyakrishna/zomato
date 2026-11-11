@@ -1,0 +1,5 @@
+[build]
+  # Install dependencies as part of the build so react-scripts is always available,
+  # even in environments that skip the automatic install step.
+  command = "npm install && npm run build"
+  publish = "build"

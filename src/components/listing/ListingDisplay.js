@@ -67,6 +67,7 @@ class ListingDisplay extends Component {
               </div>
             );
           }
+          return null;
         });
       } else {
         return (
